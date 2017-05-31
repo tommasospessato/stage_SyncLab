@@ -1,1 +1,2 @@
----URI---
+                                            ---URI---
+Gli URI (Uniform Resource Identifier) forniscono un meccanismo semplice ed esemndibile per identificare una risorsa.
