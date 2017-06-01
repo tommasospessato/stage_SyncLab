@@ -1,2 +1,56 @@
                                             ---URI---
-Gli URI (Uniform Resource Identifier) forniscono un meccanismo semplice ed esemndibile per identificare una risorsa.
+-Gli URI (Uniform Resource Identifier) forniscono un meccanismo semplice ed esemndibile per identificare una risorsa.
+
+Gli URI permettono di identificare un server o una risprsa a cui vogliamo accedere.
+Risorsa=Qualunque entita che abbia un entità.
+
+-Caratteristiche:
+  E' un concetto generale che non fa riferimento necessariamente a risorse accessibili tramite HTTP.
+  E' un MAPPING concettuale ad una entità.(Il mapping può rimanere inalterato anche se camia il contenuto della risorsa.
+  
+-Sintassi:
+  Gli Uri rispettano una sintassi standard semplice e regolare
+  <scheme>:<scheme-specific-part>
+  <scheme>://<authority><path>?<query>
+  Vantaggi:
+  -Convenzioni sintattiche comuni
+  -Comune semantica per l'interpretazione
+  -Possibilita di usare nello stesso contesto differenti protocolli di accesso diversi
+  -Facilità nell'introduzione di nuovi tipi di identificatori.
+  
+Esistono due tipi di URI:
+  -URN è come identificazionee basata su nome+cognome, o meglio codice fiscale.
+  -URL è come l'indirizzo di casa o un numero di telefono (se univoci).
+
+URN:
+ Deve essere unico e duraturo
+ Consente di “parlare” di una risorsa prescindendo
+  dalla sua ubicazione e dalle modalità con cui è
+  possibile accedervi
+Un esempio molto noto è il codice ISBN (International Standard
+Book Number) che identifica a livello internazionale in modo
+univoco e duraturo un libro o una edizione di un libro di un
+determinato editore
+ Non ci dice nulla su come e dove procurarci il libro
+urn:isbn:0-9553010-9
+
+
+
+-Componenti di un URL con schema HTTP-like
+ <protocol>: Descrive il protocollo da utilizzare per
+               l'accesso al server (HTTP, HTTPS, FTP, MMS, …)
+ <username>:<password>@: credenziali per
+               l'autenticazione
+ <host>: indirizzo server su cui risiede la risorsa. Può
+           essere un indirizzo IP logico o fisico
+ <port>: definisce la porta da utilizzare (TCP come
+           protocollo di trasporto per HTTP, che vedremo è a livello
+           applicativo). Se non viene indicata, si usa porta standard
+           per il protocollo specificato (per HTTP è 80)
+ <path>: percorso (pathname) che identifica la risorsa
+           nel file system del server. Se manca, tipicamente si
+           accede alla risorsa predefinita (es. home page)
+ <query>: una stringa di caratteri che consente di
+           passare al server uno o più parametri. Di solito ha
+           questo formato:
+           parametro1=valore&parametro2=valore2…
