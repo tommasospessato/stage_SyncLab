@@ -1,1 +1,107 @@
                                       -----HTTP-----
+HTTP= Hyper Text Trasfer Protocol
+
+-E' il protocollo di livello applicativo che permette di trasferire le risorse web da server a client.
+
+-Gestisce le richieste URL
+
+Terminologia:
+ Client: programma applicativo che stabilisce una
+          connessione al fine di inviare delle richieste
+ Server: programma applicativo che accetta connessioni
+          al fine di ricevere richieste ed inviare specifiche risposte
+          con le risorse richieste
+ Connessione: circuito virtuale stabilito a livello di
+               trasporto tra due applicazioni per fini di comunicazione
+ Messaggio: è l’unità base di comunicazione HTTP, è
+             definita come una specifica sequenza di byte
+             concettualmente atomica
+ Request: messaggio HTTP di richiesta
+ Response: messaggio HTTP di risposta
+ Resource: oggetto di tipo dato univocamente definito
+ URI: Uniform Resource Identifier – identificatore unico
+       per una risorsa
+ Entity: rappresentazione di una risorsa, può essere
+          incapsulata in un messaggio, tipicam. di risposta.
+          
+RICHIESTE:
+Sia le richieste al server che le risposte ai client sono trasmesse usando stream TCP (solamente, no UDP)
+- Segue uno schema di questo tipo:
+   server rimane in ascolto (server passivo),tipicamente sulla porta 80
+   client apre una connessione TCP sulla porta 80
+     (cliente attivo, da quale porta locale?)
+   server accetta la connessione (possibili più connessioni in contemporanea)
+   client manda una richiesta
+   server invia la risposta e chiude la connessione
+
+DIFFERENZE:
+La differenza principale tra HTTP 1.0 e 1.1 è la possibilità di
+specificare coppie multiple di richiesta e risposta nella
+stessa connessione
+Le connessioni 1.0 vengono dette non persistenti mentre
+quelle 1.1 vengono definite persistenti
+
+HTTP v1.1 con PIPELING:
+Per migliorare ulteriormente le prestazioni si può
+usare usa la tecnica del pipelining:
+Il pipelining consiste nell’invio di molteplici richieste
+da parte del client prima di terminare la ricezione delle
+risposte
+Le risposte debbono però essere date nello stesso
+ordine delle richieste, poiché non è specificato un
+metodo esplicito di associazione tra richiesta e
+risposta (si pensi al funzionamento di TCP al sottostante livello
+di trasporto)
+
+Header HTTP: 
+Gli header sono costituiti da insiemi di coppie (nome:
+valore) che specificano caratteristiche del messaggio
+trasmesso o ricevuto:
+ Header generali della trasmissione
+   Data, codifica, versione, tipo di comunicazione, ecc.
+ Header relativi all’entità trasmessa
+   Content-type, Content-Length, data di scadenza, ecc.
+ Header riguardo la richiesta effettuata
+   Chi fa la richiesta, a chi viene fatta la richiesta, che tipo di
+    caratteristiche il client è in grado di accettare, quale
+    autorizzazione, ecc.
+ Header della risposta generata
+   Che server dà la risposta, che tipo di autorizzazione è
+    necessaria, ecc.
+    
+Comandi di richiesta 
+GET:
+Serve per richiedere una risorsa ad un server,
+e il metodo piu frequente  è quello che viene attivato mdiande un link.
+Ha un limite di lunghezza.
+POST:
+Progettato come il messaggio per richiedere una
+risorsa
+A differenza di GET, i dettagli per identificazione ed
+elaborazione della risorsa stessa non sono
+nell’URL, ma sono contenuti nel body messaggio
+Non ci sono limiti di lunghezza nei parametri di una
+richiesta
+
+I codici di stato:
+Lo status code è un numero di tre cifre, di cui la prima indica la
+classe della risposta e le altre due la risposta specifica
+ Ci sono 5 classi:
+   1xx: Informational. Una risposta temporanea alla richiesta,
+         durante il suo svolgimento (sconsigliata a partire da HTTP 1.0)
+   2xx:cSuccessful. Il server ha ricevuto, capito e accettato la
+       richiesta
+   3xx: Redirection. Il server ha ricevuto e capito la richiesta, ma
+          sono necessarie altre azioni da parte del client per portare a
+          termine la richiesta
+   4xx: Client error. La richiesta del client non può essere
+         soddisfatta per un errore da parte del client (errore sintattico
+         o richiesta non autorizzata)
+ 5xx: Server error. La richiesta può anche essere corretta, ma
+        il server non è in grado di soddisfare la richiesta per un
+        problema interno (suo o di applicazioni CGI)
+        
+Protocolli di sicurezza:
+SSL/TLS
+SSL: Secure Sockets Layer
+TLS: Transport Layer Security
