@@ -1,2 +1,14 @@
                                                  -----HTML-----
                                                  
+-HTML è l’acronimo di HyperText Markup Language.
+E' un linguaggio di codicica del testo a marcatori.
+
+STORIA:
+HTML è un applicazione SGML, ideato da Tim Berners-Lee a inizio anni 90.
+v1.0 Ottobre 1991
+v1.1 Novembre 1992
+v3.2 Gen 1997
+v2.0 novembre 1995
+v4.0 Dic 1997
+v5.0 Gen 2008
+
