@@ -12,3 +12,10 @@ v2.0 novembre 1995
 v4.0 Dic 1997
 v5.0 Gen 2008
 
+Sistemi di codifica caratteri:
+-Come qualsiasi altro tipo di dato, anche i caratteri vengono rappresentati all'interno di un elaboratore mediante una cadofica bianria.
+-Per codificare i caratteri si stabilisce una corrispondenza biunivoca tra gli elementi di una collezione ordinata di caratteri e un insieme di codici numerici
+Si ottiene così un coded character set che di solito si rappresenta in forma di tabella (code page o code table)
+
+I più noti sono: ASCII, Famiglia ISO 8859/ANSI, unicode(UTF-nBit).
+
