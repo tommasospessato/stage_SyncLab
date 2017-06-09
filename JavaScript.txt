@@ -1,4 +1,17 @@
                                                      ----JAVASCRIPT----
 -JavaScript è un linguaggio di scripting sviluppato per dare interattività alle pagine HTML
 
+JavaScript e Java:
+Sono due cose completamente diverse, l'unica similitudine è legata al fatto di avere entrambi la sintassi del C.
+Javascript è interpretato e non compilato, è object-based ma non class-based.
+
+A che cosa serve ?
+Il codice JavaScript viene eseguito da un interprete contenuto all’interno del browser
+Nasce per dare dinamicità alle pagine Web
+Consente quindi di:
+Accedere e modificare elementi della pagina HTML
+Reagire ad eventi generati dall’interazione con l’utente
+Validare i dati inseriti dall’utente
+Interagire con il browser:
+
 
